@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodSearch | Inicio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <!-- Cabecera con logo, título y formulario de búsqueda que solo sea el 90% del tamaño de la pantalla -->
+    <header class="flex flex-col justify-center items-center pt-8 bg-white">
+      <h1 class="text-2xl font-bold text-gray-900">FoodSearch</h1>
+      <p
+        class="text-lg font-medium text-gray-700 leading-normal tracking-normal break-words mt-5 text-center"
+      >
+        Bienvenido a la plataforma de búsqueda de comidas y recetas online!
+      </p>
+
+      <!-- Barra de navegacion que nos envie a la seccion de favoritos y al inicio -->
+      <nav class="flex justify-center items-center gap-2 py-5 px-8 bg-white">
+        <a
+          href="index.html"
+          class="p-1 rounded text-gray-700 transition-colors duration-300 hover:bg-amber-500 hover:text-white"
+          >Inicio</a
+        >
+        <a
+          href="favorites.html"
+          class="p-1 rounded text-gray-700 transition-colors duration-300 hover:bg-amber-500 hover:text-white"
+          >Favoritos</a
+        >
+      </nav>
+    </header>
+
+    <form
+      class="mx-auto rounded-lg max-w-[90%] sm:max-w-2xl bg-white p-5 mt-5 shadow-md"
+    >
+      <!-- Select con distintas categorías para buscar con clases y estilo-->
+      <select
+        id="select-categories"
+        class="form-select w-full px-3 py-2 border-2 border-amber-500 text-gray-500 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+      >
+        <option selected>Categoría</option>
+      </select>
+    </form>
+
+    <!-- Sección Main del proyecto -->
+    <main class="mt-5 bg-gray-100">
+      <section class="max-w-4xl mx-auto p-8">
+        <h2 class="text-2xl font-bold text-gray-900 text-center mt-5">
+          Resultados de búsqueda
+        </h2>
+        <p class="text-gray-700 mt-2 text-center">
+          Estas son tus elecciones, ¡esperamos que te gusten!
+        </p>
+        <!-- Grid de los resultados -->
+        <div
+          id="recipes-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-7"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Modal para mostrar instrucciones de recetas -->
+    <div
+      id="modal-container"
+      class="modal modal-container fixed inset-0 hidden"
+      tabindex="-1"
+      aria-labelledby="modal-label"
+    >
+      <div
+        class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20"
+      >
+        <!-- Fondo del modal oscurecido -->
+        <div class="fixed inset-0 bg-gray-700 opacity-75"></div>
+
+        <!-- Contenedor del modal -->
+        <div
+          class="relative sm:my-5 rounded-lg p-6 w-full max-w-lg max-h-[90vh] bg-white shadow-lg overflow-y-auto transform transition-all"
+        >
+          <header class="flex justify-between items-center mb-4">
+            <h2 class="modal__title text-lg font-bold"></h2>
+          </header>
+          <div class="modal__body mb-4"></div>
+          <footer
+            class="modal__footer flex justify-end flex-col sm:flex-row gap-3"
+          ></footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast para mostrar mensajes de error -->
+    <div class="toast-container hidden fixed top-0 right-0 p-3">
+      <div
+        class="toast transition-opacity duration-500 ease-in-out"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <header class="toast-header bg-red-500 text-white p-1">
+          <strong class="me-auto text-white">FoodSearch</strong>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </header>
+        <div class="toast-body bg-red-200 p-1">
+          <p>¡Ups! Algo salió mal, por favor intenta de nuevo.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
