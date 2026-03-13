@@ -1,0 +1,15 @@
+@use "config/variables" as var;
+
+.header {
+  padding: 0.5rem 0;
+  background-color: lighten(var.$primary-color, 10%);
+
+  &__heading {
+    color: var.$white;
+    text-align: center;
+
+    &--color {
+      color: var.$secondary-color;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.budget-form {
+  border-radius: 1rem;
+  padding: 2rem;
+  display: grid;
+  gap: 0.8rem;
+  background-color: lighten(var.$primary-color, 20%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var.$white;
+    background-color: lighten(var.$primary-color, 10%);
+  }
+
+  &__btn {
+    @include mix.button(var.$secondary-color, var.$primary-color, var.$white);
+
+    &--reset {
+      @include mix.button(var.$primary-color, var.$secondary-color, var.$white);
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "config/variables" as var;
+
+// Breakpoints
+@mixin phone {
+  @media (min-width: var.$phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: var.$tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: var.$desktop) {
+    @content;
+  }
+}
+
+@mixin desktopXL {
+  @media (min-width: var.$desktopXL) {
+    @content;
+  }
+}
+
+@mixin hover($property, $duration, $function) {
+  @media (hover: hover) {
+    transition: $property $duration $function;
+
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// Grid
+@mixin grid($column, $espaciado) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  gap: $espaciado;
+}
+
+// Botones
+@mixin button($bgColor1, $bgColor2, $textColor) {
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  display: block;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, $bgColor1 40%, $bgColor2 100%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $textColor;
+  text-align: center;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+
+    @include hover(none, 0, unset) {
+      background: linear-gradient(90deg, $bgColor1 40%, $bgColor2 100%);
+    }
+  }
+
+  @include hover(all, 0.3s, ease-in-out) {
+    background: linear-gradient(
+      90deg,
+      darken($bgColor1, 10%) 40%,
+      darken($bgColor2, 10%) 100%
+    );
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyFinance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="header__heading">
+        Easy<span class="header__heading--color">Finance</span>
+      </h2>
+    </header>
+    <main class="main main__container">
+      <div class="main__grid">
+        <div class="budget">
+          <h3 class="budget__heading">
+            Hola, <span class="budget__heading--user-name"></span>
+          </h3>
+          <div class="budget__cards" id="budgetCards">
+            <div class="budget-card budget-card--total">
+              <p class="budget-card__text">
+                Presupuesto: <span id="budgetCardTotal"></span>
+              </p>
+            </div>
+            <div class="budget-card budget-card--available">
+              <p class="budget-card__text">
+                Disponible: <span id="budgetCardAvailable"></span>
+              </p>
+            </div>
+            <div class="budget-card budget-card--spent">
+              <p class="budget-card__text">
+                Gastado: <span id="budgetCardSpent"></span>
+              </p>
+            </div>
+          </div>
+
+          <form class="budget-form" id="budgetForm" action="#">
+            <div class="budget-form__field">
+              <label for="budgetFormName" class="budget-form__label"
+                >Nombre del gasto</label
+              >
+              <input
+                type="text"
+                class="budget-form__input"
+                id="budgetFormName"
+                placeholder="Ingresa un gasto"
+              />
+            </div>
+            <div class="budget-form__field">
+              <label for="budgetFormAmount" class="budget-form__label"
+                >Cantidad</label
+              >
+              <input
+                class="budget-form__input"
+                type="number"
+                min="1"
+                id="budgetFormAmount"
+                placeholder="Ingresa la cantidad"
+              />
+            </div>
+            <div class="budget-form__field">
+              <label for="budgetFormCategory" class="budget-form__label"
+                >Categoría</label
+              >
+              <select
+                id="budgetFormCategory"
+                class="budget-form__input budget-form__select"
+              >
+                <option value="">Seleccionar una categoría</option>
+                <option value="1">Vivienda</option>
+                <option value="2">Comida</option>
+                <option value="3">Impuestos y donaciones</option>
+                <option value="4">Transporte</option>
+                <option value="5">Seguros</option>
+                <option value="6">Ahorros / Inversiones</option>
+                <option value="7">Servicios</option>
+                <option value="8">Salud y bienestar</option>
+                <option value="9">Vestimenta</option>
+                <option value="10">Recreación</option>
+                <option value="11">Personal</option>
+                <option value="12">Deudas</option>
+                <option value="13">Educación</option>
+              </select>
+            </div>
+
+            <button class="budget-form__btn">Agregar el gasto</button>
+            <button class="budget-form__btn budget-form__btn--reset">
+              Reiniciar aplicación
+            </button>
+          </form>
+        </div>
+
+        <div class="expenses">
+          <h3 class="expenses__heading">Transacciones recientes</h3>
+
+          <div id="expenses">
+            <ul class="expenses__list" id="expensesList"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.budget {
+  &__heading {
+    color: var.$secondary-color;
+    &--user-name {
+      color: var.$white;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
