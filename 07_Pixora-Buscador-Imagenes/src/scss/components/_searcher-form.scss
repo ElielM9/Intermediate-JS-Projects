@@ -1,0 +1,40 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+@use "sass:color";
+
+.searcher-form {
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+
+  &__input {
+    border: 0.2rem solid color.adjust(var.$primary-color, $lightness: 20%);
+    border-radius: 2rem;
+    outline: none;
+    padding: 1.3rem;
+    flex: 1;
+    color: var.$primary-color;
+    transition: border 0.1s ease-in-out;
+
+    &:focus {
+      border-color: var.$primary-color;
+    }
+  }
+
+  &__btn {
+    background-color: var.$primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 1.3rem 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include mix.hover(background-color, 0.3s, ease-in-out) {
+      background-color: var.$secondary-color;
+      cursor: pointer;
+    }
+  }
+}

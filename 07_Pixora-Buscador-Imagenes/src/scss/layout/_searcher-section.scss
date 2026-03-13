@@ -1,0 +1,18 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.searcher {
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+
+  &__title {
+    font-weight: 700;
+    color: var.$secondary-color;
+    max-width: 60rem;
+  }
+}

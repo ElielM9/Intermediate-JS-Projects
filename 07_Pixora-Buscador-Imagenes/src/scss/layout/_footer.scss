@@ -1,0 +1,8 @@
+@use "config/variables" as var;
+
+.footer {
+  padding: 2rem 0;
+  background-color: var.$secondary-color;
+  text-align: center;
+  color: var.$black;
+}

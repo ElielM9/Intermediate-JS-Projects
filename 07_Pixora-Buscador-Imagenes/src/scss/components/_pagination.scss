@@ -1,0 +1,32 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  // EL boton tiene que ser un circulo
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var.$primary-color;
+    color: var.$white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    @include mix.hover(background-color, 0.3s, ease-in-out) {
+      background-color: var.$secondary-color;
+    }
+  }
+}

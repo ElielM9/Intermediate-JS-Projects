@@ -1,0 +1,22 @@
+/* Variables */
+@use "config/variables" as var;
+
+.header {
+  padding: 2rem;
+  background-color: var.$primary-color;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    color: var.$white;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var.$white;
+
+    &-title {
+      font-weight: 700;
+    }
+  }
+}

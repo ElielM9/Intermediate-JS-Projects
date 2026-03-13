@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixora | Buscador de imágenes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <!-- Titulo de la página -->
+        <a class="header__link" href="index.html">
+          <h2 class="header__link-title">Pixora</h2>
+        </a>
+
+        <!-- Navegacion -->
+        <nav class="nav">
+          <a class="nav__link" href="index.html">Inicio</a>
+          <a class="nav__link" href="about.html">Acerca de</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Seccion del buscador con el titulo para las busquedas -->
+      <section class="searcher searceher__container">
+        <h2 class="searcher__title">
+          Busca imágenes y fotos de alta calidad gratis y libres de derechos
+        </h2>
+
+        <!-- Formulario de búsqueda -->
+        <form id="searcher-form" class="searcher-form">
+          <input
+            type="text"
+            id="search-term"
+            placeholder="Buscar imágenes..."
+            class="searcher-form__input"
+          />
+          <input type="submit" value="Buscar" class="searcher-form__btn" />
+        </form>
+      </section>
+
+      <!-- Galeria con imágenes de resultados -->
+      <section class="results results___container">
+        <div
+          id="results-container"
+          class="results-gallery results-gallery__grid"
+        >
+          <!-- Las imagenes se insertan aqui mediante JS -->
+        </div>
+
+        <!-- Paginacion -->
+        <div id="pagination-container" class="pagination pagination__container"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        &copy; 2025 Pixora | Buscador de imágenes con la API de Pixabay
+      </p>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
