@@ -1,0 +1,19 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    font-weight: 500;
+    color: var.$black;
+    padding: 1rem;
+
+    @include mix.hover(color, 0.2s, ease-in-out) {
+      color: var.$primary-color;
+      cursor: pointer;
+    }
+  }
+}

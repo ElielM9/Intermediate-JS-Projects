@@ -1,0 +1,18 @@
+.alert {
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+
+  &--error {
+    border-color: #ac0000;
+    background-color: #fbe9e7;
+    color: #ac0000;
+  }
+
+  &--success {
+    border-color: #049632;
+    background-color: #d3f9bb;
+    color: #049632;
+  }
+}

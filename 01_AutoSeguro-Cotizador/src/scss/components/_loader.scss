@@ -1,0 +1,32 @@
+@use "config/variables" as var;
+
+.loader {
+  display: none;
+  position: relative;
+  height: 2.5rem;
+  width: 90%;
+  background-color: var.$secondary-color;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: var.$primary-color;
+    animation: 3s prog ease-in infinite;
+  }
+
+  &--active {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@keyframes prog {
+  to {
+    width: 100%;
+  }
+}

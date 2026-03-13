@@ -1,0 +1,34 @@
+@use "config/variables" as var;
+
+@for $i from 1 to 4 {
+  h#{$i} {
+    margin: 0;
+    line-height: 1.3;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+[class$="__heading"] {
+  margin: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 0;
+}

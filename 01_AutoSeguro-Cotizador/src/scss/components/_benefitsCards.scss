@@ -1,0 +1,30 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.benefit-card {
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: var.$primary-color;
+  color: var.$white;
+  text-align: center;
+
+  @include mix.tablet {
+    margin-bottom: 0;
+  }
+
+  &__number {
+    display: inline-block;
+    width: 5rem;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: darken(var.$primary-color, 10%);
+  }
+
+  &__heading {
+    margin: 1rem 0;
+  }
+}

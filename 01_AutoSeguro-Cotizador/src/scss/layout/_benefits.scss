@@ -1,0 +1,22 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.benefits {
+  padding: 5rem 0;
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__grid {
+    padding-top: 2rem; 
+
+    @include mix.tablet {
+      @include mix.grid(2, 2rem);
+    }
+
+    @include mix.desktop {
+      @include mix.grid(4, 2rem);
+    }
+  }
+}

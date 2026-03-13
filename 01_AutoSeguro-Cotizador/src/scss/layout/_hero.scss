@@ -1,0 +1,49 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 55rem;
+  background-color: var.$secondary-color;
+  text-align: center;
+
+  @include mix.tablet {
+    min-height: 60rem;
+    text-align: left
+  }
+
+  &__grid {
+    @include mix.tablet {
+      @include mix.grid(2, 5rem);
+    }
+  }
+
+  &__text {
+    @include mix.tablet {
+      padding-left: 3.5rem;
+    }
+  }
+
+  &__heading {
+    font-weight: 700;
+
+    &--color {
+      color: var.$primary-color;
+    }
+  }
+
+  &__btn {
+    @include mix.button(var.$black, var.$primary-color);
+  }
+
+  &__img {
+    display: none;
+    background-color: var.$primary-color;
+
+    @include mix.tablet {
+      display: block;
+    }
+  }
+}

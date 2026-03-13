@@ -1,0 +1,40 @@
+@use "config/variables" as var;
+@use 'config/mixins' as mix;
+
+.quotation {
+  padding: 5rem 0;
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__results {
+    margin-top: 3rem;
+    @include mix.grid(1, 3rem)
+  }
+}
+
+.result {
+  border: 0.1rem solid var.$primary-color;
+  border-radius: 0.5rem;
+  text-align: center;
+
+
+  &__heading {
+    padding: 1rem;
+    color: var.$white;
+    background-color: var.$primary-color;
+    margin: 0;
+  }
+
+  &__list {
+    padding: 2rem;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+    span {
+      font-weight: 500;
+    }
+  }
+}
