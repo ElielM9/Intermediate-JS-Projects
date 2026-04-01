@@ -1,0 +1,128 @@
+{
+  "menu": {
+    "categories": [
+      { "id": 101, "slug": "entradas", "label": "Entradas y Snacks" },
+      {
+        "id": 102,
+        "slug": "platos-principales",
+        "label": "Platos Principales"
+      },
+      { "id": 103, "slug": "postres", "label": "Repostería" },
+      { "id": 104, "slug": "bebidas", "label": "Café y Bebidas" }
+    ],
+    "dishes": [
+      {
+        "id": 1,
+        "name": "Ensalada César",
+        "description": "Lechuga fresca, pollo a la parrilla, crutones y aderezo César.",
+        "price": 99,
+        "category_id": 101
+      },
+      {
+        "id": 2,
+        "name": "Sopa de Tomate",
+        "description": "Sopa caliente de tomate con albahaca y un toque de crema.",
+        "price": 79,
+        "category_id": 101
+      },
+      {
+        "id": 10,
+        "name": "Nachos CheckIt",
+        "description": "Totopos crujientes con queso fundido, jalapeños y guacamole.",
+        "price": 85,
+        "category_id": 101
+      },
+      {
+        "id": 11,
+        "name": "Bruschettas Clásicas",
+        "description": "Pan tostado con tomate concassé, ajo, aceite de oliva y albahaca.",
+        "price": 65,
+        "category_id": 101
+      },
+      {
+        "id": 3,
+        "name": "Pizza Margherita",
+        "description": "Pizza artesanal con mozzarella fresca, pomodoro y albahaca.",
+        "price": 149,
+        "category_id": 102
+      },
+      {
+        "id": 4,
+        "name": "Spaghetti Carbonara",
+        "description": "Pasta al dente con salsa de huevo, panceta y queso parmesano.",
+        "price": 129,
+        "category_id": 102
+      },
+      {
+        "id": 12,
+        "name": "Club Sandwich",
+        "description": "Triple piso con pollo, jamón, queso, tocino, lechuga y tomate.",
+        "price": 115,
+        "category_id": 102
+      },
+      {
+        "id": 13,
+        "name": "Bagel de Salmón",
+        "description": "Bagel artesanal con queso crema, salmón ahumado y alcaparras.",
+        "price": 135,
+        "category_id": 102
+      },
+      {
+        "id": 5,
+        "name": "Tiramisú",
+        "description": "Postre italiano con bizcocho al café y crema de mascarpone.",
+        "price": 89,
+        "category_id": 103
+      },
+      {
+        "id": 6,
+        "name": "Helado de Vainilla",
+        "description": "Dos bolas de helado cremoso con topping de chocolate.",
+        "price": 49,
+        "category_id": 103
+      },
+      {
+        "id": 14,
+        "name": "Cheesecake de Frutos Rojos",
+        "description": "Tarta de queso cremosa con mermelada casera de frambuesa.",
+        "price": 95,
+        "category_id": 103
+      },
+      {
+        "id": 15,
+        "name": "Brownie con Nueces",
+        "description": "Bizcocho de chocolate caliente con trozos de nuez y fudge.",
+        "price": 55,
+        "category_id": 103
+      },
+      {
+        "id": 7,
+        "name": "Limonada Fresca",
+        "description": "Bebida refrescante de limones reales con menta y jengibre.",
+        "price": 39,
+        "category_id": 104
+      },
+      {
+        "id": 8,
+        "name": "Café Americano",
+        "description": "Café de grano recién molido, tueste medio de la casa.",
+        "price": 29,
+        "category_id": 104
+      },
+      {
+        "id": 9,
+        "name": "Refresco",
+        "description": "Variedad de sabores clásicos servidos con hielo y limón.",
+        "price": 25,
+        "category_id": 104
+      },
+      {
+        "id": 16,
+        "name": "Capuccino Italiano",
+        "description": "Expresso con leche vaporizada y una capa densa de espuma.",
+        "price": 55,
+        "category_id": 104
+      }
+    ]
+  }
+}

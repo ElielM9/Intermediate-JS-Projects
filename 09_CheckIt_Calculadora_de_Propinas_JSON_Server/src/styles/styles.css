@@ -1,0 +1,120 @@
+/* Importaciones */
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* Estilos personalizados */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.btn-custom-order {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Definimos la animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Empieza 30px abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+
+/* Esta es la clase que aplicaremos con JS */
+@media (hover: hover) {
+  .appear {
+    opacity: 0;
+    animation: fadeInUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+}
+.btn-custom-order {
+  background: linear-gradient(135deg, #198754 0%, #157347 100%);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 50px; /* Forma de píldora */
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-bottom: 4px solid #0e4b2e; /* Sombra sólida inferior para dar profundidad */
+}
+
+/* El círculo del símbolo "+" */
+.icon-circle {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Efectos de Interacción */
+.btn-custom-order:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(25, 135, 84, 0.4);
+  filter: brightness(1.1);
+}
+
+.btn-custom-order:active {
+  transform: translateY(2px);
+  border-bottom-width: 0px;
+  margin-bottom: 4px; /* Evita que el botón "salte" al perder el borde */
+}
+
+.rounded-4 {
+  border-radius: 1.2rem !important;
+}
+
+/* Efecto para los inputs del modal */
+.custom-input {
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25) !important;
+  transform: scale(1.01);
+}
+
+/* Botón de cierre blanco para que resalte en el fondo azul */
+.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Estilo para el botón de Guardar */
+#save-client {
+  background: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+#save-client:hover {
+  background: #0a58ca;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Estilo para los items del menú que inyectaremos después */
+.menu-item-card {
+  border: 1px solid #edf2f7;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.menu-item-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}

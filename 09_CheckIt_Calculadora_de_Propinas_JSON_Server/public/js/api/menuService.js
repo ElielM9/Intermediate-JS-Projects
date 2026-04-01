@@ -1,0 +1,1 @@
+import{appState}from"../core/state.js";import{renderCategoryFilter,renderMenu}from"../components/menuUI.js";export function loadMenu(){fetch("http://localhost:3000/menu").then(e=>e.json()).then(e=>{appState.dishes=e.dishes,appState.categories=e.categories;const{dishes:t,categories:r}=appState;renderCategoryFilter(r),renderMenu(t,r)}).catch(e=>console.error(e))}

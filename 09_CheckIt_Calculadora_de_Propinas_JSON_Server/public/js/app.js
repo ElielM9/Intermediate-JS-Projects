@@ -1,0 +1,1 @@
+import{startOrder}from"./core/order_logic.js";function startApp(){initOrderListener()}function initOrderListener(){document.querySelector("#start-order").addEventListener("click",()=>{const e=document.querySelector("#table"),t=document.querySelector("#hour");startOrder(e,t)})}document.addEventListener("DOMContentLoaded",startApp);
